@@ -34,7 +34,7 @@ export class AuthService {
   signIn(credentials: { username: string, password: string, rememberMe: boolean }): Observable<string> {
     this.remember = `${credentials.rememberMe}`;
 
-    return this._http.post<string>(`${this._coreApi}/login`, credentials).pipe(
+    return this._http.post<string>(`${this._coreApi}/sign-in`, credentials).pipe(
       switchMap((res: any) => {
         this.accessToken = res.accessToken;
         this.isUserLoggedIn = true;
@@ -53,7 +53,7 @@ export class AuthService {
   }
 
   signOut(): Observable<string> {
-    return this._http.get<string>(`${this._coreApi}/logout`).pipe(
+    return this._http.get<string>(`${this._coreApi}/sign-out`).pipe(
       switchMap((res: any) => {
         this.accessToken = '';
         this.isUserLoggedIn = false;
