@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of, switchMap } from 'rxjs';
+import { Observable, of, switchMap, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -64,6 +64,14 @@ export class AuthService {
 
   signUp(user: { email: string, name: string, password: string }): Observable<any> {
     return this._http.post(`api/auth/sign-up`, user);
+  }
+
+  getUserProfile(): Observable<any> {
+    return this._http.get<any>(`${this._coreApi}/profile`).pipe(
+      tap((user) => {
+
+      })
+    );
   }
 
 }
