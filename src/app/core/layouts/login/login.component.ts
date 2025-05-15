@@ -8,5 +8,9 @@ import { SharedModule } from '../../../shared/shared.module';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+email: string = '';
+  password: string = '';
+  showPassword: boolean = false;
+};
+  
 
-}
