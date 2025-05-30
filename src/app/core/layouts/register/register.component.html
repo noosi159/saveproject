@@ -1,0 +1,205 @@
+<div class="bg-login-regis-forgot-otp">
+  <!-- Wave Background SVG -->
+  <svg
+    class="wave-bg-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
+    <defs>
+      <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FEE0DA" />
+        <stop offset="100%" stop-color="#FFFFFF" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#gradient)"
+      fill-opacity="1"
+      d="M0,0L40,42.7C80,85,160,171,240,197.3C320,224,400,192,480,154.7C560,117,640,75,720,74.7C800,75,880,117,960,154.7C1040,192,1120,224,1200,213.3C1280,203,1360,149,1400,122.7L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+    ></path>
+  </svg>
+
+  <!-- Logo -->
+  <div class="logo-bottom-left">
+    <img
+      src="https://minioapi.iotechsoft.com/api/v1/uploads/jele/logo-text-black.png?path=assest"
+      alt="aji"
+    />
+  </div>
+
+  <!-- Flex Layout Content -->
+  <!-- card -->
+  <div
+    class="flex flex-col items-center justify-center min-h-screen px-6 py-10 z-10 relative"
+  >
+    <div class="p-12 bg-white rounded-3xl w-full max-w-2xl shadow-xl">
+      <div class="mb-7">
+        <h3 class="font-semibold text-2xl text-gray-800">Sign Up</h3>
+        <p class="text-gray-400">
+          have an account?
+          <a
+            routerLink="/sign-in"
+            class="text-sm text-purple-700 hover:text-purple-700"
+            >Sign in</a
+          >
+        </p>
+      </div>
+
+      <form>
+        <div class="space-y-6">
+          <!-- Email -->
+          <p-floatlabel>
+            <input
+              id="email"
+              pInputText
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              class="w-full"
+            />
+            <label for="email">email-rmutl</label>
+          </p-floatlabel>
+
+          <!-- Tel -->
+          <p-floatlabel>
+            <input
+              id="tel"
+              pInputText
+              type="text"
+              [(ngModel)]="tel"
+              name="tel"
+              class="w-full"
+            />
+            <label for="tel">Phone Number</label>
+          </p-floatlabel>
+
+          <!-- Username -->
+          <p-floatlabel>
+            <input
+              id="username"
+              pInputText
+              type="text"
+              [(ngModel)]="username"
+              name="username"
+              class="w-full"
+            />
+            <label for="username">Username</label>
+          </p-floatlabel>
+
+          <!-- Password -->
+          <div class="relative">
+            <p-floatlabel>
+              <input
+                id="password"
+                [type]="showPassword ? 'text' : 'password'"
+                pInputText
+                [(ngModel)]="password"
+                name="password"
+                class="w-full pr-10"
+              />
+              <label for="password">Password</label>
+            </p-floatlabel>
+            <button
+              type="button"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 text-purple-700"
+              (click)="showPassword = !showPassword"
+            >
+              <i
+                class="pi"
+                [ngClass]="showPassword ? 'pi-eye-slash' : 'pi-eye'"
+              ></i>
+            </button>
+          </div>
+
+          <!-- First Name and Last Name in same row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <p-floatlabel>
+              <input
+                id="firstName"
+                pInputText
+                type="text"
+                [(ngModel)]="firstName"
+                name="firstName"
+                class="w-full"
+              />
+              <label for="firstName">First Name</label>
+            </p-floatlabel>
+
+            <p-floatlabel>
+              <input
+                id="lastName"
+                pInputText
+                type="text"
+                [(ngModel)]="lastName"
+                name="lastName"
+                class="w-full"
+              />
+              <label for="lastName">Last Name</label>
+            </p-floatlabel>
+          </div>
+
+          <!-- Student ID -->
+          <p-floatlabel>
+            <input
+              id="studentId"
+              pInputText
+              type="text"
+              [(ngModel)]="studentId"
+              name="studentId"
+              class="w-full"
+            />
+            <label for="studentId">Student ID</label>
+          </p-floatlabel>
+          <!-- Year -->
+          <p-floatlabel>
+            <input
+              id="year"
+              pInputText
+              type="text"
+              [(ngModel)]="year"
+              name="year"
+              class="w-full"
+            />
+            <label for="year">Year</label>
+          </p-floatlabel>
+
+          <!-- Bio -->
+          <p-floatlabel>
+            <textarea
+              id="bio"
+              pInputTextarea
+              [(ngModel)]="bio"
+              name="bio"
+              rows="3"
+              class="w-full text-sm px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-400"
+            ></textarea>
+            <label for="bio">Short Bio</label>
+          </p-floatlabel>
+
+          <!-- Skills -->
+          <p-floatlabel>
+            <input
+              id="skills"
+              pInputText
+              [(ngModel)]="skills"
+              name="skills"
+              class="w-full"
+            />
+            <label for="skills">Skills</label>
+          </p-floatlabel>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            pButton
+            label="Sign Up"
+            class="w-full bg-purple-700 hover:bg-purple-600 text-white p-3 rounded-lg font-semibold transition duration-300"
+          ></button>
+
+          <div class="mt-7 text-center text-gray-400 text-xs">
+            <span> Copyright © 2025 UPORT. Empowering Future Developers. </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

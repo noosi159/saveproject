@@ -1,2 +1,25 @@
 @use "tailwindcss" as *;
 @plugin "tailwindcss-primeui";
+
+.bg-login-regis-forgot-otp{
+  @apply min-h-screen w-full bg-no-repeat bg-top bg-fixed relative overflow-hidden pb-24 md:pb-0;
+  background-image: linear-gradient(to bottom, #FECDDF 0%, #FFFFFF 50%, #FFFFFF 70%, #FFFFFF 100%);
+}
+
+.wave-bg-svg {
+  @apply absolute bottom-0 left-0 w-full z-0;
+}
+
+.logo-bottom-left {
+  @apply absolute bottom-4 left-6 z-20;
+  img {
+    @apply w-36 h-auto;
+  }
+}
+@theme{
+  
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1440px;
+}

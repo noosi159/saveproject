@@ -1,0 +1,49 @@
+<div 
+  class="relative min-h-screen flex justify-center items-center bg-white "
+  style="background: linear-gradient(to bottom, #FECDDF 0%,#FFFFFF 50%,#FFFFFF 70%,#FFFFFF 100%)"
+>
+
+  <!-- Wave Background SVG -->
+  <svg class="absolute bottom-0 left-0 w-full z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <defs>
+      <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FEE0DA" />
+        <stop offset="100%" stop-color="#FFFFFF" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#gradient)"
+      fill-opacity="1"
+      d="M0,0L40,42.7C80,85,160,171,240,197.3C320,224,400,192,480,154.7C560,117,640,75,720,74.7C800,75,880,117,960,154.7C1040,192,1120,224,1200,213.3C1280,203,1360,149,1400,122.7L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+    ></path>
+  </svg>
+
+  
+
+  <!-- Form Container (Card) -->
+      <div class="p-12 bg-white dark:bg-gray-700 z-10 rounded-3xl w-full max-w-2xl shadow-2xl text-center mr-8 ml-8">
+    <!-- Logo and Header -->
+      <div class="flex flex-col items-center">
+    <img src="/logo.png" alt="aji" class="w-50 h-50 mb-2" />
+    <div class="font-bold text-xl mb-2">Verify OTP</div>
+    <p class="text-muted-color block mb-8">Enter the 6-digit code sent to your email.</p>
+   <p-inputotp [(ngModel)]="otp" [length]="6" inputClass="custom-otp-input">
+  <ng-template #input let-token let-events="events" let-index="index">
+    <input
+      type="text"
+      [maxLength]="1"
+      (input)="events.input($event)"
+      (keydown)="events.keydown($event)"
+      [attr.value]="token"
+      class="custom-otp-input"
+    />
+  </ng-template>
+</p-inputotp>
+    <div class="flex justify-between mt-8 self-stretch">
+        <p-button label="Resend Code" [link]="true" class="p-0"/>
+        <p-button label="Submit Code"/>
+    </div>
+</div>
+    
+</div>
+    

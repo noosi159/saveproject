@@ -10,6 +10,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';  
 import { IftaLabelModule } from 'primeng/iftalabel';
+import { InputOtpModule } from 'primeng/inputotp';
+import { MessageModule } from 'primeng/message';
+import { MessagesModule } from 'primeng/messages';
+
+
 
 
 @NgModule({
@@ -29,6 +34,10 @@ import { IftaLabelModule } from 'primeng/iftalabel';
     ButtonModule,
     CheckboxModule,
     IftaLabelModule,
+    InputOtpModule,
+    MessageModule,
+    MessagesModule,
+
   ],
   exports: [
     RouterModule,
@@ -42,6 +51,10 @@ import { IftaLabelModule } from 'primeng/iftalabel';
     ButtonModule,
     CheckboxModule,
     IftaLabelModule,
+    InputOtpModule,
+    MessageModule,
+    MessagesModule,
+    
   ]
 })
 export class SharedModule { }
