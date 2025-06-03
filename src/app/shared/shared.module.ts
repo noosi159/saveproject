@@ -13,6 +13,8 @@ import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputOtpModule } from 'primeng/inputotp';
 import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
 
 
@@ -37,6 +39,8 @@ import { MessagesModule } from 'primeng/messages';
     InputOtpModule,
     MessageModule,
     MessagesModule,
+    IconFieldModule,
+    InputIconModule,
 
   ],
   exports: [
@@ -54,6 +58,8 @@ import { MessagesModule } from 'primeng/messages';
     InputOtpModule,
     MessageModule,
     MessagesModule,
+    IconFieldModule,
+    InputIconModule,
     
   ]
 })

@@ -1,2 +1,112 @@
 <app-nav-bar></app-nav-bar>
-<app-footer></app-footer>
+
+<!-- Wrapper ทั้งหน้า -->
+<div class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <div
+    class="bg-[#07041B] flex flex-col items-center justify-center py-14 px-4"
+  >
+    <h1 class="text-4xl font-bold mb-6 text-white text-center">Help Center</h1>
+    <p-iconfield class="w-full max-w-3xl">
+      <!-- ให้กว้างเต็มที่แต่จำกัด max width -->
+      <p-inputicon
+        styleClass="pi pi-search"
+        [ngStyle]="{ color: '#C3C3C3' }"
+      ></p-inputicon>
+      <input type="text" pInputText placeholder="Search" class="w-full" />
+    </p-iconfield>
+  </div>
+
+  <!-- Main Content (ลอยอยู่กลางจอแบบปรับได้) -->
+  <main
+    class="flex-grow flex flex-col items-center justify-center px-4 py-16 bg-gradient-to-b from-[#FFFFFF] to-[#FEE0DA]"
+  >
+    <!-- Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-semibold">
+        Need help? We’ve got your back.
+      </h2>
+      <p class="text-gray-500 mt-1">
+        Behind the scenes of The Portfolio Platform
+      </p>
+    </div>
+
+    <!-- Grid Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl w-full">
+      <!-- Card 1 -->
+      <div
+        class="rounded-xl border border-[#E5EBFF] p-6 flex flex-col items-center text-center hover:shadow-md transition"
+      >
+        <img
+          src="https://img5.pic.in.th/file/secure-sv1/Vectoradf89840fc248a9e.png"
+          alt="aji"
+        />
+        <i class="pi pi-question-circle text-4xl mb-4"></i>
+        <h3 class="font-semibold">Frequently Asked Questions (FAQs)</h3>
+        <p class="text-sm text-gray-600 mt-1">
+          How to share your work with others and customizing your portfolio link
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="rounded-xl border border-[#E5EBFF] p-6 flex flex-col items-center text-center hover:shadow-md transition"
+      >
+        <img
+          src=" https://img2.pic.in.th/pic/Vector-149f34b7266ae8d6b.png"
+          alt="aji"
+        />
+        <i class="pi pi-comments text-4xl mb-4"></i>
+        <h3 class="font-semibold">How to contact support</h3>
+        <p class="text-sm text-gray-600 mt-1">Contact support</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="rounded-xl border border-[#E5EBFF] p-6 flex flex-col items-center text-center hover:shadow-md transition"
+      >
+        <img
+          src=" https://img5.pic.in.th/file/secure-sv1/Group386c3a267ae2c29a.png"
+          alt="aji"
+        />
+        <i class="pi pi-cog text-4xl mb-4"></i>
+        <h3 class="font-semibold">Resolving common issues</h3>
+        <p class="text-sm text-gray-600 mt-1">Can’t remember password</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="rounded-xl border border-[#E5EBFF] p-6 flex flex-col items-center text-center hover:shadow-md transition"
+      >
+        <img
+          src=" https://img5.pic.in.th/file/secure-sv1/Group-1d483522bb5f13354.png"
+          alt="aji"
+        />
+        <i class="pi pi-search text-4xl mb-4"></i>
+        <h3 class="font-semibold">Examples & Tutorials</h3>
+        <p class="text-sm text-gray-600 mt-1">
+          Go in for watch Examples & Tutorials
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div
+        class="rounded-xl border border-[#E5EBFF] p-6 flex flex-col items-center text-center hover:shadow-md transition col-span-full sm:col-span-2 max-w-md mx-auto"
+      >
+        <img
+          src="https://img5.pic.in.th/file/secure-sv1/Vectoradf89840fc248a9e.png"
+          alt="aji"
+        />
+        <i class="pi pi-question text-4xl mb-4"></i>
+        <h3 class="font-semibold">Resolving common issues</h3>
+        <p class="text-sm text-gray-600 mt-1">
+          How to upload your portfolio. Supported file types and sizes. Managing
+          your Portfolio.
+        </p>
+      </div>
+    </div>
+  </main>
+  <div class="mt-auto">
+    <app-footer></app-footer>
+  </div>
+</div>
