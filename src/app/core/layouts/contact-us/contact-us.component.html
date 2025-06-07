@@ -9,9 +9,9 @@
       Questions, bug reports, feedback, feature requests — we’re here for it
       all.<br />
       Already use Uport?
-      <a routerLink="/sign-in" class="text-blue-400 underline">Sign in</a> so we can tailor
-      your support experience. If that’s not possible, we’d still like to hear
-      from you!
+      <a routerLink="/sign-in" class="text-blue-400 underline">Sign in</a> so we
+      can tailor your support experience. If that’s not possible, we’d still
+      like to hear from you!
     </p>
   </div>
 
@@ -25,41 +25,45 @@
         (ngSubmit)="onSubmit()"
         class="flex flex-col gap-6"
       >
-        <p-floatlabel>
+        <div class="flex flex-col space-y-1">
+          <label for="email" class="text-sm font-medium text-gray-700"
+            >Email</label
+          >
           <input
-            id="email"
             pInputText
-            type="email"
             formControlName="email"
-            class="w-full"
+            type="email"
+            id="email"
+            placeholder="name@live.rmutl.ac.th"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          <label for="email">email-rmutl</label>
-        </p-floatlabel>
-
-        <p-floatlabel>
+        </div>
+        <!-- Subject -->
+        <div class="flex flex-col space-y-1">
+          <label for="subject" class="text-sm font-medium text-gray-700"
+            >Subject</label
+          >
           <input
-            id="subject"
             pInputText
+            id="subject"
             type="text"
             formControlName="subject"
-            class="w-full"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="subject"
           />
-          <label for="subject">Subject</label>
-        </p-floatlabel>
-
-        <div class="flex flex-col space-y-1">
-          <label for="message" class="text-sm font-medium text-gray-700"
-            >How can we help?</label
-          >
-          <textarea
-            id="message"
-            pInputTextarea
-            formControlName="message"
-            rows="4"
-            class="w-full bg-gray-200 rounded-md px-3 py-2"
-          ></textarea>
         </div>
-
+<!-- Message -->
+<div class="flex flex-col space-y-1">
+  <label for="message" class="text-sm font-medium text-gray-700">How can we help?</label>
+  <textarea
+    id="message"
+    pInputTextarea
+    formControlName="message"
+    rows="4"
+    placeholder="Write your message here"
+    class="w-full px-4 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
+  ></textarea>
+</div>
         <button
           pButton
           type="submit"

@@ -15,7 +15,9 @@ import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
-
+import { FooterComponent } from '../core/layouts/footer/footer.component';
+import { NavbarhomeComponent } from '../core/layouts/navbarhome/navbarhome.component';
+import { NavComponent } from '../core/layouts/nav-bar/nav-bar.component';
 
 
 
@@ -41,6 +43,9 @@ import { InputIconModule } from 'primeng/inputicon';
     MessagesModule,
     IconFieldModule,
     InputIconModule,
+    FooterComponent,
+    NavbarhomeComponent,
+    NavComponent,
 
   ],
   exports: [
@@ -60,6 +65,9 @@ import { InputIconModule } from 'primeng/inputicon';
     MessagesModule,
     IconFieldModule,
     InputIconModule,
+    FooterComponent,
+    NavbarhomeComponent,
+    NavComponent,
     
   ]
 })
