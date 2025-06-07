@@ -7,6 +7,5 @@ import { SharedModule } from '../../../shared/shared.module';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavComponent {
-  isMenuOpen = false;
-  isUserMenuOpen = false;
+
 }

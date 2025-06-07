@@ -13,7 +13,11 @@ import { IftaLabelModule } from 'primeng/iftalabel';
 import { InputOtpModule } from 'primeng/inputotp';
 import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
-
+import { NavComponent } from '../core/layouts/nav-bar/nav-bar.component';
+import { FooterComponent } from '../core/layouts/footer/footer.component';
+import { NavbarhomeComponent } from '../core/layouts/navbarhome/navbarhome.component';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
 
 
@@ -37,6 +41,11 @@ import { MessagesModule } from 'primeng/messages';
     InputOtpModule,
     MessageModule,
     MessagesModule,
+    NavComponent,
+    FooterComponent,
+    NavbarhomeComponent,
+    IconFieldModule,
+    InputIconModule,
 
   ],
   exports: [
@@ -54,6 +63,11 @@ import { MessagesModule } from 'primeng/messages';
     InputOtpModule,
     MessageModule,
     MessagesModule,
+    NavComponent,
+    FooterComponent,
+    NavbarhomeComponent,
+    IconFieldModule,
+    InputIconModule,
     
   ]
 })
