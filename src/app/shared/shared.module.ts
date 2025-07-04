@@ -18,6 +18,7 @@ import { FooterComponent } from '../core/layouts/footer/footer.component';
 import { NavbarhomeComponent } from '../core/layouts/navbarhome/navbarhome.component';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 
 
@@ -46,6 +47,7 @@ import { InputIconModule } from 'primeng/inputicon';
     NavbarhomeComponent,
     IconFieldModule,
     InputIconModule,
+    NgxExtendedPdfViewerModule
 
   ],
   exports: [
@@ -68,7 +70,7 @@ import { InputIconModule } from 'primeng/inputicon';
     NavbarhomeComponent,
     IconFieldModule,
     InputIconModule,
-    
+    NgxExtendedPdfViewerModule
   ]
 })
 export class SharedModule { }

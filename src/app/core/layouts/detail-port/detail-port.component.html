@@ -1,0 +1,98 @@
+<!-- Wrapper ทั้งหน้า -->
+<div class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <div
+    class="bg-[#07041B] flex flex-col items-center justify-center py-14 px-8"
+  >
+    <h1 class="text-6xl font-bold mb-6 text-white">Portfolio</h1>
+  </div>
+
+  <!-- Main Content -->
+  <main
+    class="flex-grow flex flex-col items-center justify-center px-4 py-16 bg-[linear-gradient(120deg,_#FFFFFF_50%,_#FEE0DA_100%)]"
+  >
+    <!-- body -->
+    <div *ngIf="portfolio">
+      <p class="text-2xl font-semibold">{{ portfolio.name }}</p>
+      <p class="text-xl text-gray-600">{{ portfolio.faculty }}</p>
+      <br />
+      <br />
+      <iframe
+        *ngIf="portfolio.file_type === 'pdf' && safePdfUrl"
+        [src]="safePdfUrl"
+        class="w-full max-w-[1400px] h-[769px] border rounded-md shadow-sm"
+      ></iframe>
+
+      <a
+        [href]="portfolio.file_path"
+        target="_blank"
+        class="block text-blue-600 mt-2 text-sm text-center hover:underline"
+      >
+        🔎 เปิดแบบเต็มหน้าจอ
+      </a>
+      <br />
+      <p class="italic">
+        <strong>My github or gitlap :</strong>
+        <a
+          [href]="portfolio.repo_url"
+          target="_blank"
+          class="text-blue-600 hover:underline break-words"
+        >
+          {{ portfolio.repo_url }}
+        </a>
+      </p>
+      <br />
+      <div class="mb-10 text-sm leading-relaxed whitespace-pre-line">
+        <p>{{ portfolio.details }}</p>
+      </div>
+
+      <div class="text-xs text-gray-500">
+        <p>Created at: {{ portfolio.created_at }}</p>
+        <p>Updated at: {{ portfolio.updated_at }}</p>
+      </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div
+      class="mt-8 w-full max-w-[1000px] px-6 border rounded-md shadow-sm bg-gray-50"
+    >
+      <h2 class="text-2xl font-semibold mb-4">Comments</h2>
+
+      <!-- Comment Input -->
+      <textarea
+  [(ngModel)]="newComment"
+  rows="3"
+  placeholder="Write your comment here..."
+  class="w-full p-2 border rounded resize-none mb-2"
+></textarea>
+
+<!-- ห่อปุ่มด้วย div ที่ใช้ flex จัดเรียง -->
+<div class="flex justify-end">
+  <button
+    (click)="addComment()"
+    [disabled]="!newComment.trim()"
+    class="bg-[#3F23E5] text-white text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 rounded-2xl lg:rounded-[20px] hover:bg-[#2a18c5] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-medium"
+  >
+    Comment
+  </button>
+</div>
+
+      <!-- Comment List -->
+      <div class="mt-6 space-y-4">
+        <div
+          *ngFor="let comment of comments"
+          class="p-3 bg-white border rounded shadow-sm"
+        >
+          <p class="whitespace-pre-line">{{ comment }}</p>
+        </div>
+
+        <p *ngIf="comments.length === 0" class="text-gray-500 italic">
+          No comments yet.
+        </p>
+        <br>
+      </div>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</div>

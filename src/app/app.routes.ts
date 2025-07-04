@@ -10,9 +10,10 @@ import { HelpCenterComponent } from './pages/help-center/help-center.component';
 //import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component'; 
 import { ImportPortComponent } from './pages/import-port/import-port.component';
-
+import {DetailPortComponent} from './core/layouts/detail-port/detail-port.component';
 export const routes: Routes = [
-    { path: '', redirectTo: 'about-us', pathMatch: 'full' },
+  { path: '', redirectTo: 'detail-port', pathMatch: 'full' },
+  { path: 'detail-port', component: DetailPortComponent },
   { path: 'import-port', component: ImportPortComponent },
   { path: 'about-us', component: AboutUsComponent },  
   { path: 'contact', component: ContactUsComponent },
