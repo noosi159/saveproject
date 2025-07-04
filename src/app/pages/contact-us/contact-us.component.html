@@ -1,0 +1,80 @@
+<!-- AI  -->
+
+<div class="flex flex-col min-h-screen">
+  <div
+    class="bg-[#07041B] flex flex-col items-center justify-center py-14 px-4 text-white py-12 text-center"
+  >
+    <h1 class="text-3xl md:text-4xl font-bold">Contact Us</h1>
+    <p class="mt-2 text-sm md:text-base px-4 md:px-0">
+      Questions, bug reports, feedback, feature requests — we’re here for it
+      all.<br />
+      Already use Uport?
+      <a routerLink="/sign-in" class="text-blue-400 underline">Sign in</a> so we
+      can tailor your support experience. If that’s not possible, we’d still
+      like to hear from you!
+    </p>
+  </div>
+
+  <!-- Zoom Container -->
+  <div class="flex justify-center mt-[-50px] px-4 mb-20">
+    <div
+      class="mt-8 bg-[#F7FAFC] p-6 md:p-8 rounded-2xl shadow-lg w-full max-w-md transition-transform duration-300 transform scale-100 hover:scale-[1.02]"
+    >
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="flex flex-col gap-6"
+      >
+        <div class="flex flex-col space-y-1">
+          <label for="email" class="text-sm font-medium text-gray-700"
+            >Email</label
+          >
+          <input
+            pInputText
+            formControlName="email"
+            type="email"
+            id="email"
+            placeholder="name@live.rmutl.ac.th"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+        <!-- Subject -->
+        <div class="flex flex-col space-y-1">
+          <label for="subject" class="text-sm font-medium text-gray-700"
+            >Subject</label
+          >
+          <input
+            pInputText
+            id="subject"
+            type="text"
+            formControlName="subject"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="subject"
+          />
+        </div>
+<!-- Message -->
+<div class="flex flex-col space-y-1">
+  <label for="message" class="text-sm font-medium text-gray-700">How can we help?</label>
+  <textarea
+    id="message"
+    pInputTextarea
+    formControlName="message"
+    rows="4"
+    placeholder="Write your message here"
+    class="w-full px-4 py-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
+  ></textarea>
+</div>
+        <button
+          pButton
+          type="submit"
+          label="Send"
+          class="w-full bg-purple-600 hover:bg-purple-700 text-white"
+          [disabled]="contactForm.invalid"
+        ></button>
+      </form>
+    </div>
+  </div>
+  <div class="mt-auto">
+  
+  </div>
+</div>
