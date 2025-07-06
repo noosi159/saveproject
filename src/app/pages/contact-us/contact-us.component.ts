@@ -28,5 +28,8 @@ export class ContactUsComponent {
       this.contactForm.markAllAsTouched(); // ช่วยแสดง error ถ้าฟอร์มไม่ valid
     }
   }
+  submitForm() {
+  console.log('Form submitted!');
+}
 }
 

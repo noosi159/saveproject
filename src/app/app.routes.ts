@@ -12,7 +12,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ImportPortComponent } from './pages/import-port/import-port.component';
 import {DetailPortComponent} from './core/layouts/detail-port/detail-port.component';
 export const routes: Routes = [
-  { path: '', redirectTo: 'detail-port', pathMatch: 'full' },
+  { path: '', redirectTo: 'import-port', pathMatch: 'full' },
   { path: 'detail-port', component: DetailPortComponent },
   { path: 'import-port', component: ImportPortComponent },
   { path: 'about-us', component: AboutUsComponent },  
