@@ -1,0 +1,27 @@
+<nav class="w-full py-4 px-6 bg-transparent absolute top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Logo with link to home -->
+    <div class="text-white font-bold text-xl">
+      <a routerLink="/">
+        <img src="/images/logos/logo.png" alt="Logo" class="w-[153px] h-[90px]" />
+      </a>
+    </div>
+
+    <!-- Menu items -->
+    <div class="hidden md:flex space-x-8">
+      <a routerLink="/portfolio" class="text-white hover:text-gray-300">Portfolio</a>
+      <a routerLink="/about-us" class="text-white hover:text-gray-300">About Us</a>
+      <a routerLink="/contact" class="text-white hover:text-gray-300">Contact Us</a>
+      <a routerLink="/helpcenter" class="text-white hover:text-gray-300">Help</a>
+
+      <!-- Icon Link -->
+      <a routerLink="/help">
+        <img
+          src="/images/icons/use.png"
+          alt="Help Icon"
+          class="w-[19px] h-[19px]"
+        />
+      </a>
+    </div>
+  </div>
+</nav>
